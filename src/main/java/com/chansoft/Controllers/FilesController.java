@@ -35,8 +35,4 @@ public class FilesController {
 		}
 	}
 
-	@RequestMapping(path = "/lol", method = RequestMethod.GET)
-	public String returnLOL() {
-		return "LOL";
-	}
 }
