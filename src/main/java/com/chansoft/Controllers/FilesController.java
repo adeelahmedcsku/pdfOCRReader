@@ -31,6 +31,7 @@ public class FilesController {
 			}
 			return filesServices.scanDirectory(file, UUID.randomUUID().toString());
 		} catch (Exception e) {
+			e.printStackTrace();
 			return "Invalid base64 string";
 		}
 	}

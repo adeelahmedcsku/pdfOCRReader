@@ -24,13 +24,14 @@ public class FilesServices {
 				fileNumbers.put(requestUUID, 0);
 			}
 			if (curr.isFile() && Files.getFileExtension(curr.getAbsolutePath()).toLowerCase().contains("pdf")) {
-				if (filesRepository.findByFileDirectoryIgnoreCase(curr.getAbsolutePath()).size() != 0) {
+				if (filesRepository.findByFileDirectoryIgnoreCase(curr.getAbsolutePath()).size() == 0) {
 					FilesEntity filesEntity = new FilesEntity();
 					filesEntity.setOcrCompleted(false);
 					filesEntity.setOcrDownloaded(false);
 					filesEntity.setOcrIndexed(false);
 					filesEntity.setUploaded(false);
 					filesEntity.setFileDirectory(curr.getAbsolutePath());
+					filesRepository.save(filesEntity);
 					fileNumbers.put(requestUUID, (fileNumbers.getOrDefault(requestUUID, 0) + 1));
 				}
 			} else if (curr.isDirectory()) {
