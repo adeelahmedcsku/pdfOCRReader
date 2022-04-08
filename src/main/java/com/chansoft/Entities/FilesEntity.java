@@ -42,6 +42,6 @@ public class FilesEntity {
 	@Column(name = "ocrJSONFileName", columnDefinition = "json")
 	private String ocrJSONFileName;
 
-	@Column(name = "ocrJSONFileName", columnDefinition = "varchar(1000)")
+	@Column(name = "fileDirectory", columnDefinition = "varchar(1000)")
 	private String fileDirectory;
 }
