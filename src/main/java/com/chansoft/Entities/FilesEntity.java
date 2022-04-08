@@ -1,4 +1,4 @@
-package com.example.demo.Entities;
+package com.chansoft.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

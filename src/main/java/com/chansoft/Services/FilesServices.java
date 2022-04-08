@@ -1,4 +1,4 @@
-package com.example.demo.Services;
+package com.chansoft.Services;
 
 import java.io.File;
 import java.util.HashMap;
@@ -6,8 +6,8 @@ import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.Entities.FilesEntity;
-import com.example.demo.Repositories.FilesRepository;
+import com.chansoft.Entities.FilesEntity;
+import com.chansoft.Repositories.FilesRepository;
 import com.google.common.io.Files;
 
 @Service
